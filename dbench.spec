@@ -8,7 +8,6 @@ URL: http://samba.org/ftp/tridge/dbench/README
 Group: System/Kernel and hardware
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
-BuildRoot: %{_tmppath}/%{name}-%{version}-root
 
 %description
 dbench is a filesystem benchmark that generates load patterns similar
