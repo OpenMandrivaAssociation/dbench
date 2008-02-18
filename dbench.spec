@@ -1,7 +1,7 @@
 Summary: Filesystem benchmark similar to Netbench
 Name: dbench
 Version: 3.04
-Release: %mkrel 2
+Release: %mkrel 3
 Source: http://samba.org/ftp/tridge/dbench/dbench-3.04.tar.gz
 License: GPL
 URL: http://samba.org/ftp/tridge/dbench/README
