@@ -1,4 +1,4 @@
-Summary: DBench is a filesystem benchmark similar to Netbench
+Summary: Filesystem benchmark similar to Netbench
 Name: dbench
 Version: 3.04
 Release: %mkrel 2
