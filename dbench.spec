@@ -6,6 +6,7 @@ Source: http://samba.org/ftp/tridge/dbench/%{name}-%{version}.tar.gz
 License: GPLv3+
 URL: http://samba.org/ftp/tridge/dbench/README
 Group: System/Kernel and hardware
+BuildRequires: libpopt-devel
 Requires(post): rpm-helper
 Requires(preun): rpm-helper
 BuildRoot: %{_tmppath}/%{name}-%{version}-root
