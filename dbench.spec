@@ -1,9 +1,9 @@
 Summary: Filesystem benchmark similar to Netbench
 Name: dbench
-Version: 3.04
-Release: %mkrel 5
-Source: http://samba.org/ftp/tridge/dbench/dbench-3.04.tar.gz
-License: GPL
+Version: 4.0
+Release: %mkrel 1
+Source: http://samba.org/ftp/tridge/dbench/%{name}-%{version}.tar.gz
+License: GPLv3+
 URL: http://samba.org/ftp/tridge/dbench/README
 Group: System/Kernel and hardware
 Requires(post): rpm-helper
@@ -20,27 +20,28 @@ standard for generating load on the Linux VFS.
 %setup -q
 
 %build
+./autogen.sh
 %configure --datadir=/usr/share/dbench
 %make
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_bindir}
-mkdir -p $RPM_BUILD_ROOT%{_mandir}/man1
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/%{name}
-install -c -m 0755 -s dbench $RPM_BUILD_ROOT%{_bindir}/dbench
-install -c -m 0755 -s tbench $RPM_BUILD_ROOT%{_bindir}/tbench
-install -c -m 0755 -s tbench_srv $RPM_BUILD_ROOT%{_bindir}/tbench_srv
-install -c -m 0644 dbench.1 $RPM_BUILD_ROOT%{_mandir}/man1/dbench.1
-install -c -m 0644 client.txt $RPM_BUILD_ROOT%{_datadir}/%{name}/client.txt
-cd $RPM_BUILD_ROOT%{_mandir}/man1/
+rm -rf %{buildroot}
+mkdir %{buildroot}
+mkdir -p %{buildroot}%{_bindir}
+mkdir -p %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_datadir}/%{name}
+install -c -m 0755 -s dbench %{buildroot}%{_bindir}/dbench
+install -c -m 0755 -s tbench %{buildroot}%{_bindir}/tbench
+install -c -m 0755 -s tbench_srv %{buildroot}%{_bindir}/tbench_srv
+install -c -m 0644 dbench.1 %{buildroot}%{_mandir}/man1/dbench.1
+install -c -m 0644 client.txt %{buildroot}%{_datadir}/%{name}/client.txt
+cd %{buildroot}%{_mandir}/man1/
 ln -sf dbench.1 tbench.1
 ln -sf dbench.1 tbench_srv.1
 cd -
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
