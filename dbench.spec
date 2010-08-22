@@ -22,8 +22,8 @@ standard for generating load on the Linux VFS.
 
 %build
 ./autogen.sh
-%configure --datadir=/usr/share/dbench
-%make
+%configure2_5x --datadir=/usr/share/dbench
+%make CC="cc %ldflags"
 
 %install
 rm -rf %{buildroot}
