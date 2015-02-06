@@ -1,7 +1,7 @@
 Summary:	Filesystem benchmark similar to Netbench
 Name:		dbench
 Version:	4.0
-Release:	3
+Release:	4
 License:	GPLv3+
 Group:		System/Kernel and hardware
 Url:		http://samba.org/ftp/tridge/dbench/README
