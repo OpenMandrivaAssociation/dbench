@@ -4,7 +4,7 @@ Version:	4.0
 Release:	4
 License:	GPLv3+
 Group:		System/Kernel and hardware
-Url:		http://samba.org/ftp/tridge/dbench/README
+Url:		https://samba.org/ftp/tridge/dbench/README
 Source0:	http://samba.org/ftp/tridge/dbench/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(popt)
 
