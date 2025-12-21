@@ -6,6 +6,11 @@ License:	GPLv3+
 Group:		System/Kernel and hardware
 Url:		https://samba.org/ftp/tridge/dbench/README
 Source0:	http://samba.org/ftp/tridge/dbench/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(popt)
 
 %description
